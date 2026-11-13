@@ -6,3 +6,6 @@ It's worth noting these collations of different factoids were meant to be for an
 However, this does contain different topics from the Philosophy of Language and gives a broad overview. ANY edits would be more than appreciated.
 
 Please feel free to email ishaan.varior@gmail.com for any further edits, and if you are more tech savvy, just create a PR!!!!
+
+LLM usage disclosure:
+For LaTeX formatting, an LLM was used. I had originally written this in a google doc and it looked like it came out of hell. The writing is either quoted from a textbook, professor Snyder's slides, or my own rendition.
