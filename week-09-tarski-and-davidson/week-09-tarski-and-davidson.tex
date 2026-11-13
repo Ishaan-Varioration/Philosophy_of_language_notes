@@ -1,0 +1,219 @@
+% ===============================================================
+\chapter{Tarski and Davidson: Obsession for Truth}
+% ===============================================================
+
+\textbf{Tarski}: Banach--Tarski paradox and all. I love all these mathematicians coming in here, hehehe.
+
+\section{Tarski's aim}
+
+Tarski aims to provide a rigorous and consistent definition of truth, or of a predicate like `is true', for a language $L$. It should meet the two conditions below:
+\begin{enumerate}[label=(\alph*)]
+  \item \emph{Formal correctness}: the definition should be a biconditional, similar to our definition of analyticity. It should also be derivable from a metalanguage not containing the definition of `true'.
+  \item \emph{Material adequacy}: All and only sentences characterised by the \emph{T-schema} (which we define below) should be categorised as true sentences in $L$.
+\end{enumerate}
+
+\section{The T-schema}
+
+\begin{definition}[T-schema]
+\[
+  \text{$S$ is true if and only if $p$.}
+\]
+$S$ ranges over the \emph{object language} and $p$ ranges over the \emph{meta language}.
+\end{definition}
+
+Given that `is true' is a predicate, it has an extension over all true statements, and therefore the schema can be modified for all true sentences $x$:
+\[
+  \text{For all $x$, $x$ is true if and only if $p$.}
+\]
+
+\section{Candidates for truth}
+
+\begin{enumerate}[label=(\alph*)]
+  \item \emph{Fregean view}: truth is an object (the True). The True can be related as a referent to any particular sentence that is true. It is the possible referent of that sentence.
+  \item \emph{Property view}: semantically, `is true' is a predicate that accepts one argument. It is a property of sentences or propositions. \textbf{Tarski opts for this view.}
+\end{enumerate}
+
+\section{Theories of truth as a predicate}
+
+\begin{definition}\leavevmode
+\begin{enumerate}[label=(\alph*)]
+  \item \emph{Deflationary theories}: saying `$S$ is true' is synonymous with just saying `$S$'.
+  \item \emph{Correspondence theories}: $S$ is true iff $S$ expresses a fact, i.e.\ is in a relation with reality. Tarski's T-schema should ideally capture this intuition.
+  \item \emph{Pragmatist/utilitarian theories}: $S$ is true iff $S$ is useful to believe in.
+  \item \emph{Coherence theories}: $S$ is true iff $S$ coheres with one's interconnected network of beliefs.
+\end{enumerate}
+\end{definition}
+
+\section{The liar's paradox}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Consider the sentence uttered by a liar: \emph{This sentence is false.}
+  \item It contradicts itself regardless of its overall semantic value.
+  \item This led Tarski to believe that defining the predicate for natural language would be absolutely useless.
+  \item Tarski stated that this paradox arose from three assumptions within all natural languages:
+  \begin{enumerate}[label=\roman*.]
+    \item The language the sentence is formed in can be used to state facts about its own semantics.
+    \item The law of the excluded middle (a sentence must be true or false, not both nor neither) holds.
+    \item The language the liar speaks in is the same language we use to process it.
+  \end{enumerate}
+  \item He then said fuck it, let me do it for maths and science instead.
+\end{enumerate}
+
+\section{Reference-relation types}
+
+According to Tarski there are two kinds of \emph{reference-relations} (relations between an expression and an object/part of the real world):
+
+\begin{definition}\leavevmode
+\begin{enumerate}[label=\roman*.]
+  \item \emph{Designation}: a relation between singular terms and objects.
+  \item \emph{Satisfaction}: a relation between sets of objects and predicates.
+\end{enumerate}
+\end{definition}
+
+\section{A demonstration of Tarski's definition of truth for the natural numbers constructed by the Peano axioms}
+\begin{slide}
+Tarski's definition for First Order Peano Arithmetic has the following two kinds of axioms:
+\begin{enumerate}
+  \item \textbf{designation axioms}: axioms specifying what singular terms designate
+  \begin{itemize}
+    \item `0' designates the number zero
+    \item `$s(0)$' designates the successor of zero
+  \end{itemize}
+  \item \textbf{satisfaction axioms}: axioms specifying the satisfaction of predicates
+  \begin{itemize}
+    \item $x$ satisfies `$Ex$' iff $x$ is a even
+    \item a pair of objects $x$ and $y$ satisfy `$Lxy$' iff $x$ is less than $y$
+  \end{itemize}
+\end{enumerate}
+We can extend satisfaction to complex formulas using logical connectives:
+\begin{itemize}
+  \item $x$ satisfies `$\neg Fx$' iff $x$ is not an $F$
+  \item $x$ satisfies `$Fx \wedge Gx$' iff $x$ is both an $F$ and a $G$
+  \item $x$ satisfies `$Fx \vee Gx$' iff $x$ is an $F$ or a $G$ (possibly both)
+\end{itemize}
+And we can also extend satisfaction to quantifiers:
+\begin{itemize}
+  \item $x$ satisfies `$\exists x\, \phi$' iff $x$ satisfies $\phi$ on at least one variable assignment
+  \item $x$ satisfies `$\forall x\, \phi$' iff $x$ satisfies $\phi$ on every variable assignment
+\end{itemize}
+\end{slide}
+
+Note that all relations are not symmetric.
+
+\section{Truth in terms of satisfaction for artificial languages}
+
+Remember that satisfaction is a relation for predicates. The following phrases truth as one such relation:
+
+\begin{definition}
+A (closed) sentence $S$ is true iff `$S$' is satisfied by all variable assignments (VAs).
+\end{definition}
+
+A demonstration, once again with the first-order Peano axioms:
+
+\begin{slide}
+(8)\quad $\exists x (Ex \vee L0x)$
+
+\smallskip
+We can give the truth-conditions for (8) by using the definitions above:
+\begin{itemize}
+  \item `$\exists x (Ex \vee L0x)$' is true iff `$\exists x (Ex \vee L0x)$' is satisfied by all VAs
+  \item `$\exists x (Ex \vee L0x)$' is satisfied by all VAs iff some VA satisfies `$Ex \vee L0x$'
+  \item Some VA satisfies `$Ex \vee L0x$' iff it satisfies `$Ex$' or `$L0x$'
+  \item A VA satisfies `$Ex$' or `$L0x$' iff at least one object $x$ is even or $0 < x$
+  \item `$\exists x (Ex \vee L0x)$' is true iff at least one object $x$ is even or $0 < x$
+\end{itemize}
+\end{slide}
+
+\section{Avoiding paradoxes like the liar's paradox}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Let there be a language $L_0$.
+  \item A vital part of the paradox is that sentences in the language of the liar are allowed to make statements about their own semantics, implying that the object language of the liar is also its meta language.
+  \item Let us make that not so for $L_0$. `Is true' is not a predicate you will find within $L_0$. Rather, you will find the predicate `is true' for $L_0$ in its meta language $L_1$. Let this predicate be labelled $\T_1$. Its domain is all sentences of $L_0$.
+  \item $\T_1$ is not a truth predicate for its own language. That belongs to the meta language of $L_1$, namely $L_2$. This predicate only applies to T-sentences of $L_1$.
+  \item We can keep going for artificial languages until we get \textbf{Tarski's hierarchy}.
+  \item Given that no sentence in the object language can state its own semantic value, we have kept the meta and object languages separate. We have patched out the paradoxes.
+\end{enumerate}
+
+\section{Davidson}
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{He wanted to take the above theory and apply it to natural languages.}
+  \item Tarski thought of T-sentences as ``partial definitions'' (subsets) of the extension of a truth-predicate for a formal language. Davidson instead understands them as specifying \textbf{truth conditions}, which to Davidson are \textbf{meanings}, of natural language sentences.
+  \item This can also be used to translate across different languages by switching around the hierarchy of object and meta language.
+\end{enumerate}
+
+\section{Three conditions for a theory of meaning for natural languages}
+
+\subsection{Extensional adequacy}
+
+\begin{definition}[Extensional adequacy]
+The theory must generate accurate meanings for all and only the sentences of a language $L$, and it must do so in a purely extensional way.
+\end{definition}
+
+\begin{enumerate}[label=\roman*.]
+  \item Most semantic theories take the form ``$a$ in $L$ means $x$''. This makes the context \textbf{intensional}. We don't want this, because this context is dependent on the functionality of ``means''. This is why Frege tried to distinguish sense from reference.
+  \item Davidson seems to suggest that any theory of natural language meaning which gives the meanings of natural language expressions in intensional terms presupposes the very notion it should try to explain, namely meaning. So, to avoid circularity, a theory of meaning must be extensional.
+  \item Extensional adequacy throws out concepts we find problematic or vague, such as:
+  \begin{enumerate}
+    \item Semantic theories whose meta language invokes intensional entities, for example meta languages that invoke:
+    \begin{enumerate}[label=(\alph*)]
+      \item Fregean senses (the thought that snow is white);
+      \item possible worlds (the set of all worlds where snow is white);
+      \item hyperintensional entities (properties etc.).
+    \end{enumerate}
+    \item Translating sentences of natural language into a metalanguage that introduces intensional contexts, for example propositional attitude verbs, adverbs like ``necessarily'', noun phrases like ``the $x$'', etc.
+  \end{enumerate}
+  \item Extensional adequacy does allow translation of sentences of natural language into purely extensional meta languages, such as First Order Predicate Logic (FOPL) or set theory.
+\end{enumerate}
+
+\subsection{Compositionality}
+
+\begin{definition}
+All meanings must be compositional (the return of the homomorphism).
+\end{definition}
+
+Compositionality not only allows us to understand complex constructions in $L$, but also explains why we can learn languages. Understanding a language requires learning units of meaning plus general rules for syntactically and semantically combining them, sufficient for understanding indefinitely many sentences.
+
+\subsection{Charitability}
+
+\begin{definition}
+In accordance with certain principles of interpretation, we must correctly interpret the speakers of a language $L$.
+\end{definition}
+
+Using the T-schema invokes two problems that can be solved by principles of interpretation:
+\begin{enumerate}
+  \item \emph{Correct translation}: a sentence of the metalanguage $p$ provides correct truth-conditions for a sentence of the object language $S$ only if $p$ correctly translates $S$. But ``correct translation'' presupposes that $S$ and $p$ mean the same thing. So Davidson needs to assume a notion of meaning.
+  \item \emph{The T-schema overgenerates (return of substitution)}: as formulated by the T-schema, $p$ provides necessary and sufficient conditions for the truth of $S$. However, this only requires that $S$ and $p$ have the same truth-value. Thus, any sentence having the same truth-value as $p$ can be substituted for $p$, resulting in a true instance of the T-schema. For example, `Snow is white' is true if and only if grass is green. But surely `Snow is white' does not mean that grass is green!
+\end{enumerate}
+
+Our makeshift solution: we can specify ``constitutive constraints'' on correct translation which do not assume a notion of meaning. If we interpret speakers charitably, as holding beliefs which are, according to us, mostly true, then we can rule out ``rogue T-sentences'' by considering what else speakers likely believe.
+
+\section{Objections to Davidson}
+
+\begin{objection}[Natural language is not extensional]
+By now, given the problems of SSV, it is pretty obvious why natural language cannot be extensional. It obliterates the meanings of predicates that apply to the same set.
+\end{objection}
+
+\begin{objection}[Extensional adequacy can be undermined]
+In order for certain sentences to make sense, Davidson has allowed for some exceptions:
+\begin{enumerate}
+  \item I'm sitting now.
+  \item (1) is true relative to speaker $s$ and time $t$ (in English) iff $t$ is the time of utterance and $s$ is sitting at $t$ (note that this is brought about because of indexicals).
+\end{enumerate}
+However, due to these exceptions, there isn't a limit on including intensional entities, and our entire motivation for extensional adequacy is thrown out of the window.
+\end{objection}
+
+\begin{objection}[Anti-reductionism]
+Davidson's argument against intensional theories being used to define meaning can be interpreted as follows:
+\begin{premises}
+  \item[P1)] A reductive explanation of $X$s is appropriate iff it (the explanation) does not refer to or presuppose prior knowledge of $X$s.
+  \item[P2)] A semantic theory should be a reductive explanation of what meanings are.
+  \item[C1)] No semantic theory should refer to or presuppose prior knowledge of meanings.
+  \item[P3)] Intensional semantic theories do refer to/presuppose prior knowledge of meanings.
+  \item[C2)] Intensional semantic theories are inappropriate to refer to prior knowledge of meanings.
+\end{premises}
+P2) is a heavy premise to assume, and anti-reductionists mainly oppose this same premise.
+
+\emph{Objection}: not all theories of $X$s are intended to be reductive explanations of what $X$s are; for example, set theory.
+\end{objection}
