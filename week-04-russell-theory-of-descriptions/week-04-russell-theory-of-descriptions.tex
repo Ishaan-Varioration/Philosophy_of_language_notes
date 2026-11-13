@@ -1,0 +1,81 @@
+% ===============================================================
+\chapter{Russell's Theory of Descriptions}
+% ===============================================================
+
+\textbf{Bertrand Russell}: set theory and logic man. Snyder went through hoops to prove him wrong.
+
+\section{Surface grammar is misleading}
+
+\begin{itemize}
+  \item In sentences like ``I met a man'', expressions like ``a man'' cannot be singular terms, because they cannot be mapped to single objects (their referent is not a single object), despite the sentence being similar in grammatical structure to ``I met Donkey Kong''.
+  \item Russell argued that ``a man'' is instead a second-level function (similar to ``there exists a man''). It maps ``I met'' to a truth value.
+  \item This implies surface grammar cannot be a good guide to meaning.
+  \item This implies there are very few singular terms in Russell's theory of descriptions.
+\end{itemize}
+
+\section{Logical translation}
+
+If not grammar, Russell believes you can translate phrases into logical form to find meaning. \emph{Logical form} here just means a translation of a phrase into logic.
+
+\section{The copula}
+
+\begin{definition}
+The predication ``to be'' is known as the \emph{copula}.
+\end{definition}
+
+The copula is ambiguous and can have two possible meanings:
+\begin{itemize}
+  \item \emph{`Is' of predication}: a copula that predicates a property of a singular term.
+  \item \emph{`Is' of identity}: a copula that identifies the referents of two singular terms.
+\end{itemize}
+
+\section{Types of descriptions}
+
+\begin{definition}[Indefinite descriptions]
+Expressions like `an $F$'. `An $F$ is $G$' is true if
+\begin{enumerate}
+  \item at least one thing is an $F$;
+  \item that thing is a $G$.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Definite descriptions]
+Expressions like `the $F$'. `The $F$ is $G$' is true if
+\begin{enumerate}
+  \item at least one thing is an $F$;
+  \item at most one thing is an $F$;
+  \item whatever is the thing is also $G$.
+\end{enumerate}
+\end{definition}
+
+\section{Differences from Frege}
+
+\begin{itemize}
+  \item Russell believed that Frege mislabelled definite descriptions as singular terms; rather, they were quantificational expressions. No other objects could qualify as a singular term according to Russell.
+  \item According to Russell, there was no such thing as senses.
+
+\end{itemize}
+
+\section{Solving empty definite descriptions}
+
+Goofy statements like ``the round square'' are meaningful because round and square are functions of each other that can exist. While these functions can exist, their composition is mapped to an empty set of objects, and therefore claiming that they exist cannot be true, because no object fulfills the truth condition of both of these functions. Therefore, these statements are false.
+
+\section{Meinong, and the Fregean and Russellian objections}
+
+Alexius Meinong held that certain objects, like unicorns etc., hold a certain quality of \emph{subsistence}, or basically a different type of existence. This is \emph{Meinongian ontology}.
+
+Therefore, statements like ``Pegasus is a winged horse.'' were both meaningful and true to him. The argument is as follows: if ``Pegasus is a winged horse.'' is true, then the first-level function in the sentence is mapping an object to true, and the sentence could only be true if the objects were mapped to true; therefore they require a referent, and therefore exist.
+
+\begin{argument}[Meinong]\leavevmode
+\begin{premises}
+  \item[P1)] Singular terms that feature in true sentences must have a referent.
+  \item[P2)] ``Pegasus'' is a singular term in ``Pegasus is a winged horse''.
+  \item[P3)] ``Pegasus is a winged horse'' is true.
+  \item[C)] ``Pegasus'' must have a referent.
+\end{premises}
+\end{argument}
+
+\begin{itemize}
+  \item \textbf{Frege} rejects this simply because the referents are required to exist and be mapped onto a specific object, and therefore says that this is a load of garbage. As a result of the lack of a referent, the sentence also loses meaning by compositionality. He rejects P3).
+  \item \textbf{Russell} works around this by making sure that the expressions themselves are not singular terms that cannot be mapped to a referent, but quantifiers that do not require being mapped to a particular referent that must exist. Even if they are empty, they still mean something. That being said, he rejects P3) on account of the sentence itself being false, as there exists no referent. He rejects P2) on account that ``Pegasus'' is not a singular term; rather, it is a quantificational operator.
+\end{itemize}

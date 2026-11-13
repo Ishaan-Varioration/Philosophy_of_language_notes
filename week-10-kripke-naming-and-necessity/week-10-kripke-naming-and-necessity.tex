@@ -1,0 +1,176 @@
+% ===============================================================
+\chapter{Kripke, Naming and Necessity}
+% ===============================================================
+
+\textbf{Saul Kripke}: Snyder's Noether. The God in his eyes. Resurrector of metaphysics.
+
+\section{Deconstructing descriptivism}
+
+Types of descriptivism that Kripke identified:
+
+\begin{definition}\leavevmode
+\begin{enumerate}[label=\roman*.]
+  \item \emph{Fregean/Russell descriptivism}: names are synonymous with definite descriptions.
+  \item \emph{Cluster theory}: names are synonymous with clusters of definite descriptions.
+\end{enumerate}
+\end{definition}
+
+\begin{argument}[Kripke against descriptivism]
+``Desc.'' refers to both Fregean descriptions and cluster descriptions.
+\begin{premises}
+  \item[P1)] If descriptivism were correct, then for any name $a$ there would be a $d \in$ Desc.\ such that the statement `$a$ is $d$' is (i) analytic, (ii) knowable a priori, (iii) necessarily true.
+  \item[P2)] There exists an $a$ such that there does not exist a $d$ for which the above three properties are fulfilled.
+  \item[C)] Descriptivism is incorrect and does not hold.
+\end{premises}
+\end{argument}
+
+\begin{definition}[The three properties]\leavevmode
+\begin{enumerate}[label=\roman*.]
+  \item \emph{Analyticity}: true in virtue of meaning alone, for example definitions.
+  \begin{itemize}
+    \item Contrast, \emph{syntheticity}: true in virtue of how the world is.
+  \end{itemize}
+  \item \emph{Knowable a priori}: knowable independently of experience, for example mathematical statements.
+  \begin{itemize}
+    \item Contrast, \emph{a posteriori}: knowledge dependent on experience.
+  \end{itemize}
+  \item \emph{Necessarily true}: true in all possible worlds, for example the law of self-identity.
+  \begin{itemize}
+    \item Contrast, \emph{contingent}: may or may not be true.
+  \end{itemize}
+\end{enumerate}
+\end{definition}
+
+\begin{note}
+Analyticity entails the other two properties.
+\end{note}
+
+\section{The metaphysical argument against descriptivism}
+
+\subsection{Modal logic}
+
+To be very honest with you, the slides do an excellent job here, and I am going to leave them to do their job, except for one note. You might notice that the relation of accessibility should be a little more sharply defined, considering that the two modal operators rely on accessing different worlds. The best answer I found was from this guy on StackExchange, which works for the purpose of these notes:
+\begin{enumerate}
+  \item Assume we are using a variable domain approach, as David Lewis does to preserve his counterparts. If you have defined a proper model, you know that $R(w_1, w_2)$ if in your model the pair $(w_1, w_2)$ is in the extension of $R$. If you do not have a model, you may be able to infer this from the presumed properties of $R$; for example, from $R(w_0, w_1)$ and $R(w_0, w_2)$ you can infer $R(w_1, w_2)$ if $R$ is Euclidean. You define this relation in the way that characterizes the modality in question. You need to have an idea what properties the respective modality has in the first place.
+  \item The last two sentences are a little beyond the scope of this course and I am going to leave it alone now. For now, assume that within a certain possibility, if it is not possible to contain a relation within those laws or a certain modality, it is simply inaccessible.
+\end{enumerate}
+
+\begin{slide}
+The modern notion of necessity comes from \textbf{modal logic}: the logic of possibility and necessity. Its semantics is due to Kripke, who introduces two key notions:
+\begin{enumerate}
+  \item \textbf{possible worlds}: There are innumerable ways the world could have been: dinosaurs may have survived, Miley Cyrus could have been President, etc. For each way the world could be, there is a possible world in which things are that way. Formally, we can think of these as just points.
+  \item \textbf{accessibility}: Possible worlds are related to one another through the relation of accessibility. Intuitively, a possible world $w_2$ is accessible from world $w_1$ if $w_2$ is possible given how things are in $w_1$. There are various formal properties we can impose on the accessibility relation (reflexivity, symmetry, transitivity, etc), resulting in different \emph{systems} of modal logic.
+\end{enumerate}
+We can think of different modal systems as modeling different kinds of possibility:
+\begin{itemize}
+  \item \textbf{epistemic possibility}: what's possible given what we know
+  \item \textbf{deontic possibility}: what's possible given the laws of morality
+  \item \textbf{physical possibility}: what's possible given the laws of physics
+  \item \textbf{logical possibility}: what's possible given the laws of logic
+  \item \textbf{metaphysical possibility}: what's possible given the ``laws of metaphysics''
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+\textbf{Necessity and Possibility.} Modal logic introduces two operators: `$\Box$' (necessity) and `$\Diamond$' (possibility). Their semantics is given as follows, for any proposition $p$:
+\begin{enumerate}
+  \item `$\Box p$' is true at $w$ iff $p$ is true at all worlds accessible from $w$
+  \item `$\Diamond p$' is true at $w$ iff $p$ is true at least one world accessible from $w$
+\end{enumerate}
+Given these definitions, we can distinguish between:
+\begin{enumerate}
+  \item \textbf{necessary truths}: statements true in all accessible worlds
+  \item \textbf{necessary falsehoods}: statements false in all accessible worlds
+  \item \textbf{contingencies}: statements true in some but not all accessible worlds
+\end{enumerate}
+\end{slide}
+
+\subsection{The argument}
+
+\begin{argument}[Metaphysical argument]\leavevmode
+\begin{premises}
+  \item[P0)] Assume `Aristotle' and `the best student of Plato' are synonymous.
+  \item[P1)] If descriptivism were correct, then `Aristotle is the best student of Plato' would be analytic, and thus necessarily true.
+  \item[P2)] The above sentence is contingent.
+  \item[C)] The descriptive theory is wrong.
+\end{premises}
+\end{argument}
+
+\section{The semantic argument against descriptivism}
+
+\subsection{Rigid designation}
+
+\begin{definition}\leavevmode
+\begin{enumerate}[label=\roman*.]
+  \item \emph{Designator}: a coverall term for singular terms: expressions whose semantic function is to refer to particular objects, such as names and definite descriptions.
+  \item \emph{Rigid designator}: a designator that refers to the same thing in every possible world in which that thing exists.
+\end{enumerate}
+\end{definition}
+
+\paragraph{Rigidity implies necessity of identity.}
+Suppose `$\alpha$' and `$\beta$' are rigid designators, and suppose `$\alpha = \beta$' is true. Then in the actual world, `$\alpha$' and `$\beta$' refer to the same thing, say $y$. But since `$\alpha$' and `$\beta$' are rigid, they refer to $y$ in all possible worlds (in which $y$ exists). But then in every possible world, `$\alpha = \beta$' is true. In other words, `$\alpha = \beta$' is necessarily true.
+
+\subsection{The argument}
+
+\begin{argument}[Semantic argument]\leavevmode
+\begin{premises}
+  \item[P1)] If descriptivism were correct, then `Aristotle' and `the best student of Plato' would both be rigid designators, referring to Aristotle in all possible worlds.
+  \item[P2)] `Aristotle', but not `the best student of Plato', is a rigid designator.
+  \item[C)] Thus, descriptivism cannot be correct.
+\end{premises}
+\end{argument}
+
+\section{The epistemic argument against descriptivism}
+
+(This guy fucking hated descriptivism.)
+
+\begin{argument}[Epistemic argument]\leavevmode
+\begin{premises}
+  \item[P1)] If descriptivism were correct, then identity statements of the form `$\alpha$ is the $\delta$' would be analytic, and thus knowable a priori. Hence:
+  \begin{enumerate}[label=\roman*.]
+    \item Speakers knowing the meaning of `$\alpha$' should also know a specific description $\delta$ which distinguishes the referent of `$\alpha$' from everything else.
+    \item Speakers should not be able to use `$\alpha$' to refer to $\alpha$ if something other than $\alpha$ is the actual referent of `the $\delta$'.
+  \end{enumerate}
+\end{premises}
+\end{argument}
+
+\begin{example}[Counterexample]
+Many people know that Richard Feynman and Murray Gell-Mann are famous physicists. But this is probably all they know. Thus, they don't know a specific $\delta$ which would distinguish Feynman from Gell-Mann. Yet they can refer to both using their names.
+\end{example}
+
+\section{Necessity, a prioricity and analyticity}
+
+All the above arguments are different types of arguments based on analyticity (semantic), necessity (metaphysical) and a prioricity (epistemic). There are examples where one property can be absent (analyticity still entails the other two, though):
+\begin{enumerate}[label=\roman*.]
+  \item \emph{Necessary a posteriori}: knowable only empirically, while still being necessarily true, which implies a lack of a prioricity. For example, ``water is H$_2$O'', which, while true, is only knowable through experience.
+  \item \emph{Contingent a priori}: true in some but not all worlds, but knowable independently of experience. For example, ``The length of the standard meter stick $S$ is one meter'', where the length is a non-rigid designator.
+\end{enumerate}
+
+\section[Direct reference and causal reference theory]{Direct reference and causal reference theory\\ (post-Kripkeans)}
+
+\begin{definition}[Direct reference theory]
+The meaning of a name is its referent. That is, at least for names, there is no distinction between meaning and reference.
+\end{definition}
+
+\paragraph{Semantics vs metasemantics.}
+\begin{enumerate}
+  \item \emph{Semantic theories}: a theory telling us what any name means (descriptivism, direct reference theory).
+  \item \emph{Metasemantic theories}: a theory telling us why the reference-relation holds between a name and its referent, if it holds at all. The causal theory is hinted at for this one.
+\end{enumerate}
+
+\begin{definition}[Causal theory of reference]\leavevmode
+\begin{enumerate}[label=\roman*.]
+  \item For a name `$\alpha$', an \emph{initial baptism} happens, in one of two ways:
+  \begin{enumerate}
+    \item via \emph{ostension}: by pointing directly at an object and dubbing it `$\alpha$';
+    \item via \emph{description}: by giving a description `$\delta$' and declaring that the referent of `$\alpha$' is to be whatever uniquely satisfies `$\delta$'.
+  \end{enumerate}
+  \item The initial baptism fixes the referent of `$\alpha$'.
+  \item The name is then passed from the initial dubber to other speakers, who use the name with the intention of referring to the same object.
+  \item This establishes a causal link between the referent and subsequent users of the name.
+  \item The name continues being passed in this manner, from speaker to speaker, establishing a causal-historical link between speakers and the referent.
+  \item It is in virtue of there being a causal chain linking any user of the name and the referent that speakers manage to successfully refer to that thing using `$\alpha$'. Without that link, no reference would be achieved.
+\end{enumerate}
+\end{definition}
+
+Direct reference theory is just the Referential Theory of Meaning applied to names. Descriptivism has been torn apart and we are back to a very interesting square one.

@@ -1,0 +1,87 @@
+% ===============================================================
+\chapter{Frege on Reference and Compositionality}
+% ===============================================================
+
+\textbf{Gottlob Frege}: defender of logicism. Weird right wing guy. Frege's Puzzle.
+
+\section{Frege's puzzle setup: identity and cognitive significance}
+
+\begin{definition}[Identity]
+\emph{Identity statements} are statements of the form $a = b$.
+\begin{itemize}
+  \item \emph{Law of identity}: everything is identical with itself.
+  \item This implies that any statement that states $a = a$ is \emph{analytically true}, which means that it is true by virtue of what it means alone.
+\end{itemize}
+\end{definition}
+
+\begin{note}
+Analytic statements normally have low cognitive significance.
+\end{note}
+
+\begin{definition}[Singular terms]
+The expressions used to uniquely represent the specific objects $a$ and $b$ are known as \emph{singular terms}.
+\end{definition}
+
+Sometimes we will come across demonstrative phrases such as ``that $x$'' or the like. These, like definite descriptions, are also treated as singular terms.
+
+\begin{definition}[Cognitive significance]
+The difference between identity statements, according to Frege, is brought about by \emph{cognitive significance}. It is how much more non-trivial and informative a particular identity statement is when we learn it.
+\begin{itemize}
+  \item Only true statements can have cognitive significance, because ``learning'' and other factive verbs presuppose that the statements are true.
+\end{itemize}
+\end{definition}
+
+\section{Frege's Referential Theory of Meaning}
+
+\begin{definition}[Referential Theory of Meaning, RTM]
+The meaning of an expression is determined by whatever we use that expression to talk about, iff the aspect of meaning contributes to the truth/falsity of a sentence.
+\end{definition}
+
+These aspects of meaning are known as \emph{semantic values}. They can be used to classify all expressions into four different semantic values:
+
+\begin{center}
+\begin{tabular}{p{0.38\textwidth}p{0.52\textwidth}}
+\toprule
+Expression & Semantic value \\
+\midrule
+Sentences & True/False \\
+Names & Objects \\
+First-level predicates & First-level functions (map objects to truth values) \\
+Second-level predicates (quantifiers) & Second-level functions (map first-level functions to truth values) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All of the above functions here are \emph{extensional}. In this particular context, that means that two functions are equivalent if and only if their output maps to the same set for every input. (Note that, for both first-level and second-level functions, this equivalence relation partitions the space of first-level and second-level predicates.) If two functions belong to the same equivalence class, then they are known as being \emph{coextensional}.
+
+\section{Critiques of the Referential Theory of Meaning}
+
+\subsection*{Problem 1: Empty names}
+
+The meaning of a sentence is its truth-value, according to RTM. Thus, sentences without truth-values are meaningless. However, the truth-value of a sentence depends on the semantic values of its parts, given Compositionality. Specifically, sentences have a truth-value only if the names featuring refer to an object. Thus, if those names are empty, then sentences are meaningless. But this is implausible: we have no trouble understanding what they mean, even if the names featuring fail to refer.
+
+\subsection*{Problem 2: Cognitive significance}
+
+\begin{definition}[Synonymy thesis]
+Sentences that are synonymous cannot differ in cognitive significance.
+\end{definition}
+
+The Referential Theory directly contrasts the above, because sentences that clearly differ in cognitive significance are exactly the same in terms of all of their semantic values (names, sentences, first-level predicates, etc.).
+
+\subsection*{Problem 3: Substitution Salva Veritate (SSV)}
+
+\begin{definition}[Substitution Salva Veritate]
+If two expressions $a$ and $b$ have the same semantic value, then substituting either within a sentence preserves the semantic value of that particular sentence.
+\end{definition}
+
+However, propositional attitude verbs break this in half, as in the following example:
+
+\begin{example}\leavevmode
+\begin{itemize}
+  \item I believe $1 + 1 = 2$.
+  \item I believe $2 \times 1 = 2$.
+\end{itemize}
+The first statement is potentially true, but the second can be false, which contradicts SSV.
+\end{example}
+
+If RTM were correct, then sentences differing only in the substitution of expressions having the same semantic values should have the same meaning, and thus truth-value. But this is wrong: sentences differing in this way can have different truth-values.

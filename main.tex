@@ -1,0 +1,80 @@
+\documentclass[11pt,openany]{book}
+
+\usepackage[margin=1.1in,marginparwidth=0.75in,marginparsep=0.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[framemethod=default]{mdframed}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+
+% ---------------------------------------------------------------
+% Layout, following the Lecture 0 template
+% ---------------------------------------------------------------
+\renewcommand{\chaptername}{Week}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\centering}
+  {\LARGE Philosophy of Language --- \chaptertitlename\ \thechapter}
+  {0.3em}
+  {\large}
+\titlespacing*{\chapter}{0pt}{2em}{3em}
+\setlist{itemsep=2pt,topsep=4pt}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}[definition]{Example}
+\newtheorem{argument}[definition]{Argument}
+\newtheorem{objection}[definition]{Objection}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+
+% premise lists: \begin{premises} \item[P1)] ... \end{premises}
+\newenvironment{premises}
+  {\begin{description}[font=\normalfont,leftmargin=3.2em,labelwidth=2.6em,labelsep=0.6em,align=right,itemsep=1pt]}
+  {\end{description}}
+
+% framed box for material reproduced from the lecture slides
+\newenvironment{slide}
+  {\begin{mdframed}[linecolor=black!35,linewidth=0.6pt,innertopmargin=6pt,innerbottommargin=6pt]\small}
+  {\end{mdframed}}
+
+\newcommand{\T}{\mathrm{T}}
+
+\begin{document}
+
+% ---------------------------------------------------------------
+\begin{titlepage}
+\centering
+\vspace*{0.3\textheight}
+{\LARGE Philosophy of Language\par}
+\vspace{0.6em}
+{\large Lecture by Lecture Notes\par}
+\vfill
+\end{titlepage}
+
+\tableofcontents
+
+\input{week-01-introduction/week-01-introduction}
+\input{week-02-frege-reference-compositionality/week-02-frege-reference-compositionality}
+\input{week-03-fregean-senses-substitutivity/week-03-fregean-senses-substitutivity}
+\input{week-04-russell-theory-of-descriptions/week-04-russell-theory-of-descriptions}
+\input{week-05-russell-solutions-and-critiques/week-05-russell-solutions-and-critiques}
+\input{week-06-strawson-on-referring/week-06-strawson-on-referring}
+\input{week-07-grice-implicature/week-07-grice-implicature}
+\input{week-08-quine-two-dogmas/week-08-quine-two-dogmas}
+\input{week-09-tarski-and-davidson/week-09-tarski-and-davidson}
+\input{week-10-kripke-naming-and-necessity/week-10-kripke-naming-and-necessity}
+\input{week-11-putnam-meaning-and-reference/week-11-putnam-meaning-and-reference}
+\input{week-12-kripke-puzzle-about-belief/week-12-kripke-puzzle-about-belief}
+
+\appendix
+\renewcommand{\chaptername}{Appendix}
+\input{appendix/appendix}
+\input{citations/citations}
+
+\end{document}
